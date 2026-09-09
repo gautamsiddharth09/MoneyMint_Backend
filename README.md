@@ -1,6 +1,6 @@
-# FinTrack — Personal Finance & Loan Management Platform
+# MoneyMint — Personal Finance & Loan Management Platform
 
-FinTrack is a full-stack fintech application that combines **personal finance tracking** (income, expenses, categories, analytics) with a complete **personal loan lifecycle** — from AI-powered loan application and approval, through disbursement and EMI repayment via Razorpay, to automated email reminders before due dates.
+MoneyMint is a full-stack fintech application that combines **personal finance tracking** (income, expenses, categories, analytics) with a complete **personal loan lifecycle** — from AI-powered loan application and approval, through disbursement and EMI repayment via Razorpay, to automated email reminders before due dates.
 
 The project is structured as a monorepo with a **React + Vite frontend** and a **Node.js + Express + MongoDB backend**.
 
@@ -300,7 +300,7 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your@gmail.com
 SMTP_PASS=your-app-password
-EMAIL_FROM="FinTrack <your@gmail.com>"
+EMAIL_FROM="MoneyMint <your@gmail.com>"
 EMI_REMINDER_ENABLED=true
 ```
 
@@ -370,7 +370,7 @@ npm run preview
 
 ## Authentication Flow
 
-FinTrack uses **JWT stored in an httpOnly cookie** — not localStorage. This reduces XSS risk because JavaScript cannot read the token.
+MoneyMint uses **JWT stored in an httpOnly cookie** — not localStorage. This reduces XSS risk because JavaScript cannot read the token.
 
 ```mermaid
 sequenceDiagram
@@ -486,7 +486,7 @@ All analytics logic lives in `frontend/src/utils/analytics.js`.
 
 ## Loan Module — End-to-End Flow
 
-The loan module is the most complex part of FinTrack. It spans application, AI underwriting, disbursement, repayment, and automated reminders.
+The loan module is the most complex part of MoneyMint. It spans application, AI underwriting, disbursement, repayment, and automated reminders.
 
 ```mermaid
 stateDiagram-v2
@@ -683,7 +683,7 @@ Both files are intentionally mirrored to keep frontend and backend in sync.
 
 ## Razorpay Payment Integration
 
-FinTrack uses the **server-side order + signature verification** pattern recommended by Razorpay.
+MoneyMint uses the **server-side order + signature verification** pattern recommended by Razorpay.
 
 ```mermaid
 sequenceDiagram
@@ -951,7 +951,7 @@ erDiagram
 
 ## Frontend Navigation & Pages
 
-FinTrack does **not** use React Router. Navigation is managed via React state.
+MoneyMint does **not** use React Router. Navigation is managed via React state.
 
 ### App Level (`App.jsx`)
 

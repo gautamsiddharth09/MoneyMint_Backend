@@ -1,6 +1,6 @@
-# FinTrack Fintech App — Interview Questions & Answers
+# MoneyMint Fintech App — Interview Questions & Answers
 
-A comprehensive collection of technical interview questions and detailed answers based on the FinTrack personal finance and loan management platform. Organized by topic for easy preparation.
+A comprehensive collection of technical interview questions and detailed answers based on the MoneyMint personal finance and loan management platform. Organized by topic for easy preparation.
 
 ---
 
@@ -29,11 +29,11 @@ A comprehensive collection of technical interview questions and detailed answers
 
 ## 1. Project Overview
 
-### Q1. What is FinTrack and what problem does it solve?
+### Q1. What is MoneyMint and what problem does it solve?
 
 **Answer:**
 
-FinTrack is a full-stack fintech application that combines two capabilities in one platform:
+MoneyMint is a full-stack fintech application that combines two capabilities in one platform:
 
 1. **Personal finance management** — users track income, expenses, and budget categories, and view monthly analytics (savings rate, category breakdowns, budget vs. actual spending).
 
@@ -106,7 +106,7 @@ fintech-app/
 
 ## 2. System Design & Architecture
 
-### Q5. Explain the high-level architecture of FinTrack.
+### Q5. Explain the high-level architecture of MoneyMint.
 
 **Answer:**
 
@@ -185,8 +185,7 @@ export async function apiGet(path) {
 ### Q8. Why didn't you use React Router?
 
 **Answer:**
-
-FinTrack has only **6 top-level pages** (Overview, Expenses, Income, Categories, Loans, Settings) plus loan sub-views managed by an internal state machine. React Router would add:
+MoneyMint has only **6 top-level pages** (Overview, Expenses, Income, Categories, Loans, Settings) plus loan sub-views managed by an internal state machine. React Router would add:
 
 - A dependency and bundle size increase
 - URL management complexity for a simple sidebar navigation
@@ -385,7 +384,7 @@ LoanDisbursed 1──N LoanTransaction
 
 Mongoose `populate()` replaces ObjectId references with the actual referenced document — similar to a SQL JOIN.
 
-**Examples in FinTrack:**
+**Examples in MoneyMint:**
 
 ```js
 // Expense with category name (loanFormController)
@@ -966,7 +965,7 @@ if (expectedSignature !== razorpay_signature) {
 | Webhooks | Same format, test events | Production events |
 | Dashboard | Separate test/live toggle | Real transaction reports |
 
-FinTrack uses test keys (`rzp_test_Sk9w5hJL0oTpPc`) in development. For production, swap to live keys and ensure HTTPS.
+MoneyMint uses test keys (`rzp_test_Sk9w5hJL0oTpPc`) in development. For production, swap to live keys and ensure HTTPS.
 
 ---
 
